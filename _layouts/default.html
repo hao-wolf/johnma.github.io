@@ -6,15 +6,19 @@
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-<body>
-  <header>
-    <h1>{{ site.title }}</h1>
+<body style="background-image: url('{{ custom.background_image }}'); background-size: cover; background-repeat: no-repeat;">
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">{{ site.title }}</h1>
+    </div>
   </header>
-  <main>
+  <main class="site-main">
     {{ content }}
   </main>
-  <footer>
-    <p>&copy; {{ site.time | date: '%Y' }}</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ site.time | date: '%Y' }}</p>
+    </div>
   </footer>
 </body>
 </html>
